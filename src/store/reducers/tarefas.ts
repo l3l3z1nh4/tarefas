@@ -30,9 +30,41 @@ const tarefasSlice = createSlice({
   reducers: {
     remover: (state, action: PayloadAction<number>) => {
       return state.filter((tarefa) => tarefa.id !== action.payload)
+    },
+    editar: (state, action: PayloadAction<Tarefa>) => {
+      const indexDaTarefa = state.findIndex(
+        (tarefa) => tarefa.id === action.payload.id
+      )
+      if (indexDaTarefa >= 0) {
+        state[indexDaTarefa] = action.payload
+      }
+    },
+    cadastrar: (state, action: PayloadAction<Tarefa>) => {
+      const tarefaJaCadastrada = state.find(
+        (tarefa) =>
+          tarefa.titulo.toLowerCase() === action.payload.titulo.toLowerCase()
+      )
+      if (tarefaJaCadastrada) {
+        alert('Tarefa já cadastrada')
+      } else {
+        state.push(action.payload)
+      }
+    },
+    alteraStatus: (
+      state,
+      action: PayloadAction<{ id: number; finalizado: boolean }>
+    ) => {
+      const indexDaTarefa = state.findIndex(
+        (tarefa) => tarefa.id === action.payload.id
+      )
+      if (indexDaTarefa >= 0) {
+        state[indexDaTarefa].status = action.payload.finalizado
+          ? enums.Status.CONCLUIDA
+          : enums.Status.PENDENTE
+      }
     }
   }
 })
 
-export const { remover } = tarefasSlice.actions
+export const { remover, editar, cadastrar, alteraStatus } = tarefasSlice.actions
 export default tarefasSlice.reducer

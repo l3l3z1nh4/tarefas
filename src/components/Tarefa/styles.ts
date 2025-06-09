@@ -35,6 +35,28 @@ export const Card = styled.div`
   margin-bottom: 32px;
   border-radius: 16px;
   border: 1px solid rgb(180, 177, 177);
+
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    input {
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      margin-bottom: 8px;
+
+      &:checked {
+        accent-color: #777;
+      }
+      &:checked + span {
+        text-decoration: line-through;
+        color: #777;
+      }
+    }
+  }
 `
 
 export const Titulo = styled.h3`
@@ -71,16 +93,4 @@ export const BarraAcoes = styled.div`
   border-top: 1px solid #9f9f9f;
   padding-top: 16px;
   margin-top: 8px;
-`
-
-export const Botao = styled.button`
-  font-weight: bold;
-  font-size: 12px;
-  color: #ffff;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  margin-right: 8px;
-  cursor: pointer;
-  background-color: rgb(65, 65, 65);
 `

@@ -9,19 +9,4 @@ export const Filtros = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8px;
-  margin-top: 16px;
-`
-
-export const Input = styled.input`
-  width: 100%;
-  border-radius: 8px;
-  padding: 8px;
-  border: 1px solid #a1a1a1;
-  font-weight: bold;
-
-  &:focus {
-    border: 1px solid #a1a1a1;
-    outline: 2px solid #e90179;
-    color: #2c2c2c;
-  }
 `
