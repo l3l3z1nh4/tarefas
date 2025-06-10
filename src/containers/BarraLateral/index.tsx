@@ -23,7 +23,7 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
           <>
             <Input
               type="text"
-              placeholder="Buscar"
+              placeholder="🔍︎ Buscar"
               value={termo}
               onChange={(evento) => dispatch(alteraTermo(evento.target.value))}
             />
