@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Status } from '../../utils/enums/Tarefa'
+import * as enums from '../../utils/enums/Tarefa'
 import * as S from './styles'
 import { remover, editar, alteraStatus } from '../../store/reducers/tarefas'
 import { Botao } from '../../styles'
@@ -42,7 +42,12 @@ const Tarefa = ({
   return (
     <S.Card>
       <label htmlFor={titulo}>
-        <input type="checkbox" id={titulo} onChange={alteraStatusTarefa} />
+        <input
+          type="checkbox"
+          id={titulo}
+          checked={status === enums.Status.CONCLUIDA}
+          onChange={alteraStatusTarefa}
+        />
         <S.Titulo>{titulo}</S.Titulo>
       </label>
       <S.Tag parametro="prioridade" prioridade={prioridade}>

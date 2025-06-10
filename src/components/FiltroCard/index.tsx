@@ -22,12 +22,12 @@ const FilroCard = ({ legenda, criterio, valor }: Props) => {
   }
 
   const contaTarefas = () => {
-    if (criterio === 'todas') return tarefas.length
+    if (criterio === 'todas') return tarefas.itens.length
     if (criterio === 'prioridade') {
-      return tarefas.filter((tarefa) => tarefa.prioridade === valor).length
+      return tarefas.itens.filter((item) => item.prioridade === valor).length
     }
     if (criterio === 'status') {
-      return tarefas.filter((tarefa) => tarefa.status === valor).length
+      return tarefas.itens.filter((item) => item.status === valor).length
     }
   }
 
