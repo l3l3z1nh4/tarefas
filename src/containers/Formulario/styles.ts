@@ -12,6 +12,11 @@ export const Opcoes = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+      align-items: flex-start;
+  }
   label {
     font-weight: 600;
     font-size: 14px;
@@ -23,13 +28,17 @@ export const Opcoes = styled.div`
     &:checked {
       accent-color:rgb(255, 0, 132);
   }
+
 `
 export const Opcao = styled.div`
   text-transform: capitalize;
+  display: flex;
 
-  label {
-    &:hover {
+  &:hover {
+    p, label {
       color: rgb(233, 1, 121);
     }
-  }
+
+    input{
+    cursor: pointer;}
 `

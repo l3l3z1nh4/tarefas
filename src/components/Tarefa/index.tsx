@@ -48,7 +48,12 @@ const Tarefa = ({
           checked={status === enums.Status.CONCLUIDA}
           onChange={alteraStatusTarefa}
         />
-        <S.Titulo>{titulo}</S.Titulo>
+        <span>
+          <S.Titulo>
+            {estaEditando && <em>Editando:</em>}
+            {titulo}
+          </S.Titulo>
+        </span>
       </label>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
         {prioridade}

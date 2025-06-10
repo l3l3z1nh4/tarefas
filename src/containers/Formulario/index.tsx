@@ -6,7 +6,6 @@ import { Input } from '../../styles/index'
 import { Form, Opcao, Opcoes } from './styles'
 import * as enums from '../../utils/enums/Tarefa'
 import { cadastrar } from '../../store/reducers/tarefas'
-import Tarefa from '../../models/Tarefa'
 
 const Formulario = () => {
   const dispatch = useDispatch()
@@ -17,15 +16,15 @@ const Formulario = () => {
 
   const CadastraTarefa = () => (evento: FormEvent<HTMLFormElement>) => {
     evento.preventDefault()
-    const novaTarefa = new Tarefa(
-      titulo,
-      prioridade,
-      enums.Status.PENDENTE,
-      descricao,
-      9
-    )
 
-    dispatch(cadastrar(novaTarefa))
+    dispatch(
+      cadastrar({
+        titulo,
+        prioridade,
+        descricao,
+        status: enums.Status.PENDENTE
+      })
+    )
 
     setTitulo('')
     setDescricao('')

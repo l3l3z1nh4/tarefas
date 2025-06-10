@@ -65,7 +65,7 @@ const tarefasSlice = createSlice({
           ...action.payload,
           id: ultimaTarefa ? ultimaTarefa.id + 1 : 1
         }
-        state.itens.push(tarefaNova)
+        state.itens.unshift(tarefaNova)
       }
     },
     alteraStatus: (
