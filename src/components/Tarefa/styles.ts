@@ -51,10 +51,6 @@ export const Card = styled.div`
       &:checked {
         accent-color: #777;
       }
-      &:checked + span {
-        text-decoration: line-through;
-        color: #777;
-      }
     }
   }
 `
