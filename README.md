@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gerenciador de Tarefas
 
-## Available Scripts
+Este projeto é uma aplicação de gerenciamento de tarefas desenvolvida com ReactJS. O objetivo principal é permitir que os usuários adicionem, visualizem, filtrem e gerenciem suas tarefas de forma simples e eficiente.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🔍 Visão Geral
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Status**: Concluído
+- **Tecnologias**: ReactJS, Vite, CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Adicionar Tarefas**: Permite que os usuários insiram novas tarefas em um campo de entrada.
 
-### `npm run build`
+- **Listagem de Tarefas**: Exibe uma lista de tarefas adicionadas, permitindo que os usuários visualizem suas pendências.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Filtrar por Urgência e Status**: Possibilidade de visualizar tarefas com base em sua urgência (alta, média ou **baixa) e status (pendente ou concluída), facilitando o foco nas tarefas mais importantes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Marcar Tarefas como Concluídas**: Funcionalidade para marcar tarefas como concluídas, ajudando os usuários a manterem o controle de suas atividades.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Remover Tarefas**: Opção para remover tarefas da lista, mantendo a interface organizada.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🌐 Demonstração - [Link para o Projeto Online](https://tarefas-snowy.vercel.app/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Preview da Aplicação de Tarefas](/assets/tarefas_print.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+*A imagem acima mostra a interface da aplicação de gerenciamento de tarefas.*
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 💡 Aprendizados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Neste projeto, aprofundei meus conhecimentos em:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Desenvolvimento com ReactJS**: Aprendizado sobre a criação de componentes e gerenciamento de estado com React.
+
+- **Manipulação de Eventos**: Implementação de funcionalidades dinâmicas que melhoram a experiência do usuário.
+
+- **Gerenciamento de Estado**: Uso de hooks do React para gerenciar o estado da aplicação de forma eficiente.
+
+---
+
+## 📦 Instalação e Uso
+
+Para rodar a aplicação "Tarefas" em seu ambiente local, siga estes passos:
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/l3l3z1nh4/tarefas.git
+
+# 2. Acesse a pasta do projeto
+cd tarefas
+
+# 3. Instale as dependências
+npm install
+
+# 4. Compile e inicie o servidor de desenvolvimento
+npm run dev
+
+# 5. Abra o navegador e acesse a aplicação
+# A aplicação estará disponível em http://localhost:3000 (ou outra porta especificada).
